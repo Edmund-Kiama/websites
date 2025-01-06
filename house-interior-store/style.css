@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(bbc.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin-left: 20px;
+    width: 35px;
+    cursor: pointer;
+    mix-blend-mode: color-dodge; 
+    background: none;   
+}
+.navbar ul li{
+    list-style: none;
+    /*background-color: black;*/
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(219, 219, 219);
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: rgb(16, 113, 223);
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    top: 50%;
+    position: absolute;    
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1{
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 30px;
+    color: white;    
+}
+.content p{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px;
+    line-height: 20px; 
+    color:  rgb(219, 219, 219);   
+}
+.content button{
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid rgb(16, 113, 223);
+    background: transparent;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;    
+}
+span{
+    background: rgb(16, 113, 223);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border:none;
+}
